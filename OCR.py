@@ -38,7 +38,7 @@ if uploaded_file:
 
     if file_name.endswith(".pdf"):
         doc = fitz.open(stream=file_bytes, filetype="pdf")
-        st.image(doc[0].get_pixmap(dpi=150).tobytes("png"), caption="First Page Preview", use_column_width=True)
+        st.image(doc[0].get_pixmap(dpi=150).tobytes("png"), caption="First Page Preview", use_container_width=True)
         images = []
 
         for page in doc:
